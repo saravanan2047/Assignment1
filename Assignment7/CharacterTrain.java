@@ -23,7 +23,7 @@ public class CharacterTrain {
 		}
 		else
 		{
-			System.out.println("Enter a valid string");
+			System.out.println("Enter a odd length string");
 		}
 
 	}
