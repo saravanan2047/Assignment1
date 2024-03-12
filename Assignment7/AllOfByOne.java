@@ -24,22 +24,21 @@ public class AllOfByOne {
 			
 		}
 		
-		int res=checkAll(numArr1,0,numArr2,0);
+		boolean res=checkAll(numArr1,numArr2,0);
 		System.out.println(res);
-		System.out.println(res==numArr1.length?true:false);
 	}
-	public static int checkAll(int[] arr1,int index1, int[] arr2,int index2)
+	public static boolean checkAll(int[] arr1, int[] arr2,int index)
 	{
 		
-		if(arr1.length==arr2.length && (index1<arr1.length))
-		{
-			if(arr1[index1]==(arr2[index2]-1)) return checkAll(arr1,index1+1,arr2,index2+1)+1;
-			else return 0;
-		}
-	
-				
-				
-		else return 0;
+		if(arr1.length!=arr2.length) return false;
+		
+		if(index>=Math.max(arr1.length,arr2.length)) return true;
+		
+		if(arr1[index]==(arr2[index]-1) && (index<Math.max(arr1.length,arr2.length)))
+		
+				return checkAll(arr1,arr2,index+1);
+		else 
+				return false;	
 	}
 
 }
