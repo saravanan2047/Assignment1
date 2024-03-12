@@ -12,7 +12,7 @@ public class CharacterPresent {
 		System.out.println("Enter the Character to check :");
 		char ch=scan.next().charAt(0);
 		boolean bol=isChar(str,ch);
-		System.out.println(bol==true?"Character"+ch+" is present"+"in String "+str:"Character "+ch+" is not present in String "+str);
+		System.out.println(bol==true?"Character "+ch+" is present in String "+str:"Character "+ch+" is not present in String "+str);
 	}
 	public static boolean isChar(String s,char c)
 	{
