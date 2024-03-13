@@ -1,0 +1,59 @@
+package com.learn.practices;
+
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class NoRepeat {
+
+	public static void main(String[] args) 
+	{
+		Scanner scan= new Scanner(System.in);
+		int nums[]= {1,2,2,3,3,3,7,5,8,5,8,7};
+		int n = nums.length;
+
+		        // Declare the hashmap.
+		        // And hash the given array:
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for (int i = 0; i < n; i++) 
+		{
+		   map.put(nums[i], map.getOrDefault(nums[i], 0)+1);//value + 1);
+		}
+
+		        
+		//Find the single element and return the answer:
+		for (Map.Entry<Integer, Integer> it : map.entrySet()) 
+		{
+			if (it.getValue() == 1) 
+			{
+		        System.out.println( it.getKey());
+		    }
+		}
+
+		        //This line will never execute
+		        //if the array contains a single element.
+		System.out.println( -1);
+		    
+		     // Second Way
+		
+//		 Arrays.sort(nums);
+//			for(int i=0;i<nums.length-1;i+=2)
+//			{
+//				if(nums[i]!=nums[i+1])
+//	                return nums[i];
+//	        }    
+		
+		              // Third Way
+		
+		    //return nums[nums.length-1]; 
+	        // int result=0;
+	        // for(int i=0; i<nums.length; i++) 
+	        // {
+	        //     result = result^nums[i];
+	        // }
+	        // return result;
+
+	}
+
+}
