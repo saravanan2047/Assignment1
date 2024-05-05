@@ -17,14 +17,14 @@ public class AlphabetPattern {
 	        for (int i = 1; i <= n; i++) 
 	        {
 	            for (int j = 1; j <= n - i; j++) {
-	                System.out.print(" ");
+	                System.out.print(" "); // first triangle space
 	            }
-	            System.out.print(c);
+	            System.out.print(c); // pattern
 	            if (i > 1) {
 	                for (int j = 1; j <= 2 * i - 3; j++) {
-	                    System.out.print(" ");
+	                    System.out.print(" "); // inner triangel space
 	                }
-	                System.out.print(c);
+	                System.out.print(c); // pattern 
 	            }
 	            c++;
 	            System.out.println();

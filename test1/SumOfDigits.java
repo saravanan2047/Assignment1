@@ -37,7 +37,6 @@ public class SumOfDigits {
 			else {
 				result[len--]= sum;
 				carry=0;
-
 			}
 			i--;
 			j--;
